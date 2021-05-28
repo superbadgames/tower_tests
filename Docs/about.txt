@@ -1,0 +1,3 @@
+All docs for the project. This could include anything. I have thought about keeping the docs in a separate repo (so that sharing the git repo isn't as big of a deal, I can keep secrets, well... secret. Also another format may be better for that kind of stuff).
+
+Maybe only have docs relating to the code in this project... or instructions on where to find everything. I am working alone. Why do I spend so much time on this shit?

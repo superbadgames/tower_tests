@@ -1,0 +1,1 @@
+All external lib files go into this directory. The vs project has a pre-build event that should take care of all these dependencies.
