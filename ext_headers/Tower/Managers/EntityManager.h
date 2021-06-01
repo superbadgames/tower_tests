@@ -4,7 +4,6 @@
 #include "framework.h"
 #include <Tower/Entity.h>
 #include <Tower/Signature.h>
-#include <memory>
 #include <cassert>
 #include <queue>
 #include <array>
@@ -14,9 +13,9 @@ namespace Tower
     class EntityManager
     {
     public:
-        ~EntityManager(void);
+        EntityManager(void);
 
-        static std::shared_ptr<EntityManager> Instance(void);
+        ~EntityManager(void);
 
         Entity CreateEntity(void);
 
@@ -27,12 +26,9 @@ namespace Tower
         Signature GetSignature(Entity entity);
 
     private:
-        EntityManager(void);
-
         // TODO: consider writing your own queue
         std::queue<Entity> _entities;
         std::array<Signature, MAX_ENTITIES> _signatures;
-        static std::shared_ptr<EntityManager> _instance;
         U32 _activeEntities;
     };
     typedef std::shared_ptr<EntityManager> p_EntityManager;

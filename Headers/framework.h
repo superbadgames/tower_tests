@@ -5,6 +5,9 @@
 // Windows Header Files
 #include <windows.h>
 #include <cstdint>
+#include <memory>
+using std::shared_ptr;
+using std::unique_ptr;
 
 // Custom typedefs
 typedef int8_t   S8;

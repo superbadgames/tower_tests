@@ -113,14 +113,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>DEBUG</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)Headers\;$(ProjectDir)ext_headers\;$(ProjectDir)..\ExternalDependencies\boost\boost_1_70_0\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Headers\;$(ProjectDir)ext_headers\;$(ProjectDir)..\ExternalDependencies\boost_1_70_0\</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)ext_lib\;$(ProjectDir)..\ExternalDependencies\boost\boost_1_70_0\stage\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)ext_lib\;$(ProjectDir)..\ExternalDependencies\boost_1_70_0\stage\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Tower_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
@@ -136,7 +136,7 @@ xcopy /y/d "$(ProjectDir)..\Tower\Builds\$(Configuration)\Tower_$(Configuration)
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)Headers\;$(ProjectDir)ext_headers\;$(ProjectDir)..\ExternalDependencies\boost\boost_1_70_0\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Headers\;$(ProjectDir)ext_headers\;$(ProjectDir)..\ExternalDependencies\boost_1_70_0\</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
@@ -145,7 +145,7 @@ xcopy /y/d "$(ProjectDir)..\Tower\Builds\$(Configuration)\Tower_$(Configuration)
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)ext_lib\;$(ProjectDir)..\ExternalDependencies\boost\boost_1_70_0\stage\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)ext_lib\;$(ProjectDir)..\ExternalDependencies\boost_1_70_0\stage\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Tower_release.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
@@ -159,18 +159,19 @@ xcopy /y/d "$(ProjectDir)..\Tower\Builds\$(Configuration)\Tower_$(Configuration)
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>DEBUG</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)Headers\;$(ProjectDir)ext_headers\;$(ProjectDir)..\ExternalDependencies\boost\boost_1_70_0\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Headers\;$(ProjectDir)ext_headers\;$(ProjectDir)..\ExternalDependencies\boost_1_70_0\</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)ext_lib\;$(ProjectDir)..\ExternalDependencies\boost\boost_1_70_0\stage\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)ext_lib\;$(ProjectDir)..\ExternalDependencies\boost_1_70_0\stage\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Tower_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>xcopy /y/d/E "$(ProjectDIr)..\Tower\Headers\Tower" "$(ProjectDir)ext_headers\Tower\"
+      <Command>del "$(ProjectDir)ext_headers\Tower\**"
+xcopy /y/d/E "$(ProjectDIr)..\Tower\Headers\Tower" "$(ProjectDir)ext_headers\Tower\"
 xcopy /y/d "$(ProjectDir)..\Tower\Builds\$(Configuration)\Tower_$(Configuration).lib" "$(ProjectDir)ext_lib\"</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -182,7 +183,7 @@ xcopy /y/d "$(ProjectDir)..\Tower\Builds\$(Configuration)\Tower_$(Configuration)
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)Headers\;$(ProjectDir)ext_headers\;$(ProjectDir)..\ExternalDependencies\boost\boost_1_70_0\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Headers\;$(ProjectDir)ext_headers\;$(ProjectDir)..\ExternalDependencies~~\boost_1_70_0\</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
@@ -191,7 +192,7 @@ xcopy /y/d "$(ProjectDir)..\Tower\Builds\$(Configuration)\Tower_$(Configuration)
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)ext_lib\;$(ProjectDir)..\ExternalDependencies\boost\boost_1_70_0\stage\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)ext_lib\;$(ProjectDir)..\ExternalDependencies\boost_1_70_0\stage\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Tower_release.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
