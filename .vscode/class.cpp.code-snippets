@@ -1,0 +1,32 @@
+{
+  "Tower Source File": {
+    "scope": "cpp",
+    "isFileTemplate": true,
+    "prefix": "\\newTowerCpp",
+    "body": [
+      "#include \"pch.h\"",
+      "#include \"Path_To_Header/${TM_FILENAME_BASE}.hpp\"\n",
+      "using namespace Tower;",
+      "",
+      "${TM_FILENAME_BASE}::${TM_FILENAME_BASE}(void)",
+      "{}",
+      "",
+      "",
+      "${TM_FILENAME_BASE}::${TM_FILENAME_BASE}(const ${TM_FILENAME_BASE}& copy)",
+      "{}",
+      "",
+      "",
+      "${TM_FILENAME_BASE}::~${TM_FILENAME_BASE}(void)",
+      "{}",
+      "",
+      "",
+      "${TM_FILENAME_BASE}& ${TM_FILENAME_BASE}::operator=(const ${TM_FILENAME_BASE}& copy)",
+      "{",
+      "\tif(this == &copy) return *this;",
+      "",
+      "\treturn *this;",
+      "}",
+      "",
+    ]
+  }
+}

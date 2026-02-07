@@ -6,7 +6,7 @@
                 "${workspaceFolder}/Headers/",
                 "${workspaceFolder}/ext_headers/",
                 "${workspaceFolder}/ext_lib/",
-                "${workspaceFolder}/../ExternalDependencies/boost_1_70_0/"
+                "${workspaceFolder}/../ExternalDependencies/boost/boost_1_70_0/"
             ],
             "defines": [
                 "DEBUG",

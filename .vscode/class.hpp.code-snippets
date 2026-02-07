@@ -1,0 +1,34 @@
+{
+  "Tower Header file": {
+    "scope": "cpp",
+    "isFileTemplate": true,
+    "prefix": "\\newTowerHpp",
+    "body": [
+      "#pragma once",
+      "",
+      "#include \"pch.h\"",
+      "#include <Tower/framework.h>",
+      "",
+      "namespace Tower",
+      "{",
+      "\tclass ${TM_FILENAME_BASE};",
+      "\ttypedef shared_ptr<${TM_FILENAME_BASE}> p_${TM_FILENAME_BASE};",
+      "",
+      "\tclass ${TM_FILENAME_BASE}",
+      "\t{",
+      "\tpublic:",
+      "\t\t${TM_FILENAME_BASE}(void);",
+      "",
+      "\t\t${TM_FILENAME_BASE}(const ${TM_FILENAME_BASE}& copy);",
+      "",
+      "\t\t~${TM_FILENAME_BASE}(void);",
+      "",
+      "\t\t${TM_FILENAME_BASE}& operator=(const ${TM_FILENAME_BASE}& copy);",
+      "",
+      "\tprivate:",
+      "",
+      "\t};",
+      "}"
+    ]
+  }
+}
