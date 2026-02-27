@@ -6,7 +6,7 @@ I decided to use less instead of more. I'm only defining the bear minimum functi
 
 */
 #pragma once
-#include "pch.h"
+
 #include "Tower/framework.h"
 #include "Tower/Managers/ConfigurationManager.hpp"
 #include "Tower/Math/Matrix.hpp"
