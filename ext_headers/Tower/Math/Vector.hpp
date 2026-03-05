@@ -57,9 +57,6 @@ namespace Tower
 
         Vector& operator*=(F32 value);
 
-        // The so called Dot, or Scalar operator
-        F32 operator*(const Vector& other) const;
-
         F32 Dot(const Vector& other) const;
 
         Vector Cross(const Vector& other) const;
@@ -87,6 +84,8 @@ namespace Tower
         inline F32 GetZ(void) const { return _vec[Z]; }
 
         inline const F32* GetRaw(void) const { return _vec; }
+
+        inline F32 GetW(void) const { return _vec[W]; }
 
     private:
         const U32 X = 0;

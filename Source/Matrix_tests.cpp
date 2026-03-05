@@ -2,8 +2,9 @@
 
 #include "pch.h"
 #include <Tower/framework.h>
-#include <Tower/Math/Matrix.hpp>
 #include <boost/test/unit_test.hpp>
+
+#include <Tower/Math/Matrix.hpp>
 
 
 BOOST_AUTO_TEST_CASE(MatrixMultiplicationTests)
