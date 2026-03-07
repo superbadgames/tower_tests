@@ -46,7 +46,7 @@ BOOST_AUTO_TEST_CASE(VectorConstructors)
 
 BOOST_AUTO_TEST_CASE(VectorAssignmentOperators)
 {
-    std::cout << "Testing all Vector Assignment operators including =, +=, -=, and *=...\n";
+    std::cout << "Running Vector assignment operators including =, +=, -=, and *=...\n";
 
     Tower::Vector A { 12.0f, 14.0f, 16.0f };
 
@@ -103,13 +103,13 @@ BOOST_AUTO_TEST_CASE(VectorAssignmentOperators)
     BOOST_TEST(D.GetZ() == 50.0f);
     BOOST_TEST(D.GetW() == 1.0f);
 
-    std::cout << "Finished running Vector Assignment Operator tests...\n";
+    std::cout << "Finished running Vector assignment operator tests...\n";
 }
 
 
 BOOST_AUTO_TEST_CASE(VectorOperators)
 {
-    std::cout << "Running Vector Operator tests include +, -, and *...\n";
+    std::cout << "Running Vector operator tests include +, -, and *...\n";
 
     Tower::Vector A {10.0f, 15.0f, 25.0f};
 
@@ -147,14 +147,14 @@ BOOST_AUTO_TEST_CASE(VectorOperators)
     BOOST_TEST(C.GetZ() == 45.0f);
     BOOST_TEST(C.GetW() == 1.0f);
 
-    std::cout << "Finished running Vector Operator Tests...\n";
+    std::cout << "Finished running Vector operator Tests...\n";
 }
 
 
 // Answers were derived from emathhelp.net/calculators
 BOOST_AUTO_TEST_CASE(VectorSpecialFunctions)
 {
-    std::cout << "Running Vector Special Functions tests, including Dot, Cross, Length, Squared Length, and Normalize...\n";
+    std::cout << "Running Vector special functions tests, including Dot, Cross, Length, Squared Length, and Normalize...\n";
 
     Tower::Vector A {12.0f, 15.0f, 35.0f};
 
@@ -188,5 +188,5 @@ BOOST_AUTO_TEST_CASE(VectorSpecialFunctions)
     BOOST_TEST(E.GetY() == 0.841038087743017f);
     BOOST_TEST(E.GetZ() == 0.117354151778095f);
 
-
+    std::cout << "Finished running Vector special functions tests...\n";
 }
