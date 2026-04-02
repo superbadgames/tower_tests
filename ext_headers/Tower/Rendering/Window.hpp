@@ -10,6 +10,9 @@
 
 namespace Tower
 {
+    class Window;
+    typedef shared_ptr<Window> p_Window;
+
     class Window
     {
     public:
@@ -75,5 +78,4 @@ namespace Tower
 
 
     };
-    typedef shared_ptr<Window> p_Window;
 }

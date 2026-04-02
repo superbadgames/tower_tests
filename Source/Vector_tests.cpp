@@ -17,28 +17,24 @@ BOOST_AUTO_TEST_CASE(VectorConstructors)
     BOOST_TEST(A.GetX() == 0.0f);
     BOOST_TEST(A.GetY() == 0.0f);
     BOOST_TEST(A.GetZ() == 0.0f);
-    BOOST_TEST(A.GetW() == 1.0f);
 
     Tower::Vector B {42.0f, 100.0f};
 
     BOOST_TEST(B.GetX() == 42.0f);
     BOOST_TEST(B.GetY() == 100.0f);
     BOOST_TEST(B.GetZ() == 0.0f);
-    BOOST_TEST(B.GetW() == 1.0f);
 
     Tower::Vector C {54.0f, 64.0f, 72.0f};
 
     BOOST_TEST(C.GetX() == 54.0f);
     BOOST_TEST(C.GetY() == 64.0f);
     BOOST_TEST(C.GetZ() == 72.0f);
-    BOOST_TEST(C.GetW() == 1.0f);
 
     Tower::Vector D = C;
 
     BOOST_TEST(D.GetX() == 54.0f);
     BOOST_TEST(D.GetY() == 64.0f);
     BOOST_TEST(D.GetZ() == 72.0f);
-    BOOST_TEST(D.GetW() == 1.0f);
 
     std::cout << "Finished running Vector Constructor Tests...\n";
 }
@@ -48,7 +44,7 @@ BOOST_AUTO_TEST_CASE(VectorAssignmentOperators)
 {
     std::cout << "Running Vector assignment operators including =, +=, -=, and *=...\n";
 
-    Tower::Vector A { 12.0f, 14.0f, 16.0f };
+    Tower::Vector A { 12.0f, 14.0f, 16.0f};
 
     Tower::Vector B {};
 
@@ -57,7 +53,6 @@ BOOST_AUTO_TEST_CASE(VectorAssignmentOperators)
     BOOST_TEST(B.GetX() == 12.0f);
     BOOST_TEST(B.GetY() == 14.0f);
     BOOST_TEST(B.GetZ() == 16.0f);
-    BOOST_TEST(B.GetW() == 1.0f);
 
     Tower::Vector C {132.0f, 154.0f, 320.0f};
 
@@ -66,19 +61,16 @@ BOOST_AUTO_TEST_CASE(VectorAssignmentOperators)
     BOOST_TEST(B.GetX() == 144.0f);
     BOOST_TEST(B.GetY() == 168.0f);
     BOOST_TEST(B.GetZ() == 336.0f);
-    BOOST_TEST(B.GetW() == 1.0f);
 
     BOOST_TEST(C.GetX() == 132.0f);
     BOOST_TEST(C.GetY() == 154.0f);
     BOOST_TEST(C.GetZ() == 320.0f);
-    BOOST_TEST(C.GetW() == 1.0f);
 
     C += 10.0f;
 
     BOOST_TEST(C.GetX() == 142.0f);
     BOOST_TEST(C.GetY() == 164.0f);
     BOOST_TEST(C.GetZ() == 330.0f);
-    BOOST_TEST(C.GetW() == 1.0f);
 
     Tower::Vector D {50.0f, 100.0f, 25.0f};
 
@@ -87,21 +79,18 @@ BOOST_AUTO_TEST_CASE(VectorAssignmentOperators)
     BOOST_TEST(B.GetX() == 94.0f);
     BOOST_TEST(B.GetY() == 68.0f);
     BOOST_TEST(B.GetZ() == 311.0f);
-    BOOST_TEST(B.GetW() == 1.0f);
 
     D -= 20.0f;
 
     BOOST_TEST(D.GetX() == 30.0f);
     BOOST_TEST(D.GetY() == 80.0f);
     BOOST_TEST(D.GetZ() == 5.0f);
-    BOOST_TEST(D.GetW() == 1.0f);
 
     D *= 10.0f;
 
     BOOST_TEST(D.GetX() == 300.0f);
     BOOST_TEST(D.GetY() == 800.0f);
     BOOST_TEST(D.GetZ() == 50.0f);
-    BOOST_TEST(D.GetW() == 1.0f);
 
     std::cout << "Finished running Vector assignment operator tests...\n";
 }
@@ -122,7 +111,6 @@ BOOST_AUTO_TEST_CASE(VectorOperators)
     BOOST_TEST(C.GetX() == 15.0f);
     BOOST_TEST(C.GetY() == 23.0f);
     BOOST_TEST(C.GetZ() == 25.0f);
-    BOOST_TEST(C.GetW() == 1.0f);
 
     Tower::Vector D {30.0f, 45.0f, 115.0f};
 
@@ -131,21 +119,18 @@ BOOST_AUTO_TEST_CASE(VectorOperators)
     BOOST_TEST(D.GetX() == 60.0f);
     BOOST_TEST(D.GetY() == 65.0f);
     BOOST_TEST(D.GetZ() == 75.0f);
-    BOOST_TEST(D.GetW() == 1.0f);
 
     A = B - C;
 
     BOOST_TEST(A.GetX() == -10.0f);
     BOOST_TEST(A.GetY() == -15.0f);
     BOOST_TEST(A.GetZ() == -25.0f);
-    BOOST_TEST(A.GetW() == 1.0f);
 
     C = D - 30.0f;
 
     BOOST_TEST(C.GetX() == 30.0f);
     BOOST_TEST(C.GetY() == 35.0f);
     BOOST_TEST(C.GetZ() == 45.0f);
-    BOOST_TEST(C.GetW() == 1.0f);
 
     std::cout << "Finished running Vector operator Tests...\n";
 }

@@ -4,6 +4,7 @@
 #include "Tower/framework.h"
 #include "Tower/Systems/Time.hpp"
 #include "Tower/Rendering/Window.hpp"
+#include "Tower/Components/World.hpp"
 #include "Tower/Rendering/Shader.hpp"
 #include "Tower/Managers/DatabaseManager.hpp"
 #include "Tower/Systems/RenderingSystem.hpp"
@@ -18,10 +19,12 @@
 
 namespace Tower
 {
+    class Director;
+    typedef shared_ptr<Director> p_Director;
+
     // Forward Declaration:
     // Needed to compile because the window uses the director in it's callback functions, so there are circular referenced, I think.
     class Window;
-    typedef shared_ptr<Window> p_Window;
 
     enum class WindowType
     {
@@ -40,11 +43,13 @@ namespace Tower
         // I will start my db implementations, once, the world is sorted out
         bool Init(WindowType type, const string& db_filepath);
 
+        void InitWorld(p_ObjectFactory creatorOfObject, const string& playerType, bool useEditor);
+
+        void LoadMap(const string& mapName);
+
         void Cleanup(void);
 
-        void StartFrame(void);
-
-        void EndFrame(void);
+        void GameLoop(void);
 
         void ProcessEvents(void);
 
@@ -73,9 +78,9 @@ namespace Tower
 
         p_Window _window;
         Time _globalTime;
+        World _world;
 
         Director(void);
 
     };
-    typedef shared_ptr<Director> p_Director;
 }

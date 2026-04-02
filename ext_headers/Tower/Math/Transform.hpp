@@ -48,6 +48,12 @@ namespace Tower
 
         void SetOrientation(const Vector& vector);
 
+        void CalculateTransformMatrix(void);
+
+        Vector ToWorld(const Vector& vector);
+
+        Vector ToLocal(const Vector& vector);
+
         inline Vector Translate(const Vector& vector) { return _transformMatrix * vector; }
 
         inline Matrix Translate(const Matrix& matrix) { return _transformMatrix * matrix; }
@@ -70,7 +76,6 @@ namespace Tower
 
     private:
         Matrix _transformMatrix;
-        Matrix _inverseTransform;
         Vector _position;
         Vector _scale;
         Quaternion _orientation;
@@ -83,6 +88,5 @@ namespace Tower
 
         void _CalculateBasisVectors(F32 yaw, F32 pitch, F32 roll);
 
-        void _CalculateTransformMatrix(void);
     };
 };

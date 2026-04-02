@@ -38,8 +38,6 @@ namespace Tower
 
         void Set(const Vector& vector);
 
-        Matrix ToMatrix(void) const;
-
         inline void Normalize(void) { _quaternion = glm::normalize(_quaternion); }
 
         inline void SetX(F32 x) { _quaternion.x = x; }
