@@ -40,7 +40,7 @@ namespace Tower
 
         Matrix& operator-=(const Matrix& other);
 
-        Matrix operator*(const Matrix& other);
+        Matrix operator*(const Matrix& other) const;
 
         Vector operator*(const Vector& other);
 
@@ -70,7 +70,7 @@ namespace Tower
 
         void MakeIdentity(void);
 
-        inline void Inverse(void) { _matrix = glm::inverse(_matrix); }
+        void Inverse(void);
 
         inline void Set(const glm::mat4& matrix) { _matrix = matrix; }
 

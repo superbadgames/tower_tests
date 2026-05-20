@@ -11,7 +11,7 @@ namespace Tower
     public:
         Light(void);
 
-        Light(glm::vec3 color, glm::vec3 direction, real ambient, real diffuse);
+        Light(glm::vec3 color, glm::vec3 direction, F32 ambient, F32 diffuse);
 
         ~Light(void);
 
@@ -40,7 +40,7 @@ namespace Tower
     private:
         glm::vec3 _color;
         glm::vec3 _direction;
-        real _diffuse;
-        real _ambient;
+        F32 _diffuse;
+        F32 _ambient;
     };
 }

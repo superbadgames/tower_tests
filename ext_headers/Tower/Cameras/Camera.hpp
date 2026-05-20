@@ -64,6 +64,8 @@ namespace Tower
         // Why isn't this a transform?
         Vector _position;
 
+        void _DefaultInit(void);
+
         void _InitOrthographic(F32 screenWidth, F32 screenHeight, F32 viewDistance);
 
         void _InitPerspective(F32 fieldOfView, F32 aspectRation, F32 viewDistance);

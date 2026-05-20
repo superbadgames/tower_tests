@@ -57,15 +57,15 @@ namespace Tower
 
         void AddForceAtBodyPoint(const Vector& force, const Vector& point);
 
-        real GetInverseMass(void) const;
+        F32 GetInverseMass(void) const;
 
-        void SetInverseMass(real val);
+        void SetInverseMass(F32 val);
 
         bool HasFiniteMass(void) const;
 
-        const real GetMass(void);
+        const F32 GetMass(void);
 
-        void SetMass(real mass);
+        void SetMass(F32 mass);
 
         void SetInverseInertiaTensor(const Matrix& mat);
 
@@ -88,21 +88,21 @@ namespace Tower
         // TODO: Needs to be changed into an AddRotationalForce function
         inline void SetRotation(const Vector& vec) { _angularVelocity = vec; }
 
-        inline real GetLinearDamping(void) const { return _linearDamping; }
+        inline F32 GetLinearDamping(void) const { return _linearDamping; }
 
-        inline void SetLinearDamping(real val) { _linearDamping = val; }
+        inline void SetLinearDamping(F32 val) { _linearDamping = val; }
 
-        inline real GetAngularDamping(void) const { return _angularDamping; }
+        inline F32 GetAngularDamping(void) const { return _angularDamping; }
 
-        inline void SetAngularDamping(real val) { _angularDamping = val; }
+        inline void SetAngularDamping(F32 val) { _angularDamping = val; }
 
     private:
         void _TransformInertiaTensor(void);
 
         U32 _id;
-        real _inverseMass;
-        real _linearDamping;
-        real _angularDamping;
+        F32 _inverseMass;
+        F32 _linearDamping;
+        F32 _angularDamping;
         Matrix _inverseInertiaTensor;
         Matrix _inverseInertiaTensorInWorld;
         Vector _velocity;

@@ -22,20 +22,19 @@ namespace Tower
 
 
 
-        inline void SetSpringConstant(real constant)
+        inline void SetSpringConstant(F32 constant)
         {
             _springConstant = constant;
         }
 
-        inline void SetRestLength(real length)
+        inline void SetRestLength(F32 length)
         {
             _restLength = length;
         }
 
     private:
-
-        real _springConstant;
-        real _restLength;
+        F32 _springConstant;
+        F32 _restLength;
         bool _isBungie;
 
     };//end SpringForce

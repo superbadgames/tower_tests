@@ -50,13 +50,17 @@ namespace Tower
 
         void CalculateTransformMatrix(void);
 
-        Vector ToWorld(const Vector& vector);
+        Vector ToLocalRotationOnly(const Vector& vector);
 
         Vector ToLocal(const Vector& vector);
 
-        inline Vector Translate(const Vector& vector) { return _transformMatrix * vector; }
+        Matrix ToLocal(const Matrix& matrix);
 
-        inline Matrix Translate(const Matrix& matrix) { return _transformMatrix * matrix; }
+        Vector ToWorldRotationOnly(const Vector& vector);
+
+        inline Vector ToWorld(const Vector& vector) { return _transformMatrix * vector; }
+
+        inline Matrix ToWorld(const Matrix& matrix) { return _transformMatrix * matrix; }
 
         inline const Vector& GetPosition(void) const { return _position; }
 

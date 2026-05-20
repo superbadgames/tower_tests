@@ -20,20 +20,6 @@ extern "C" {
 #include <string>
 #include <cassert>
 
-
-#define REAL_MAX FLT_MAX
-#define real_sqrt sqrtf
-#define real_abs fabsf
-#define real_sin sinf
-#define real_cos cosf
-#define real_tan tanf
-#define real_atan atanf
-#define real_atan2 atan2f
-#define real_exp expf
-#define real_pow powf
-#define real_fmod fmod4
-#define real_epsilon DBL_EPSILON
-
 using std::shared_ptr;
 using std::unique_ptr;
 using std::string;
@@ -49,32 +35,34 @@ typedef uint32_t U32;
 typedef uint64_t U64;
 typedef float F32;
 typedef double F64;
-// Separate because sometimes we want to be able to change just what a real number is.
-// Also use this wherever you are talking about a real number. Only use F32 when you
-// need a 32 bit floating point number SPECIFICALLY.
-typedef float real;
 
-const real R_PI = static_cast<real>(3.14159265358979);
+
+const F32 PI = static_cast<F32>(3.14159265358979); // or 180 degrees
+const F32 TWO_PI = 2.0f * PI; // or 360 degrees
+const F32 PI_OVER_TWO = PI / 2.0f; // or 90 degrees
+const F32 _90Degrees = PI_OVER_TWO;
+const F32 _180Degrees = PI;
+const F32 _360Degrees = TWO_PI;
 
 //==========================================================================================================================
 // Global Helper functions
 //==========================================================================================================================
-inline real REAL_SQR(real x)
+inline F32 SQR(F32 x)
 {
     return x * x;
 }
 
-inline real RADIAN(real angle)
+inline F32 RADIAN(F32 angle)
 {
-    return static_cast<real>(angle * R_PI / 180.0f);
+    return static_cast<F32>(angle * PI / 180.0f);
 }
 
-inline real DEGREE(real radian)
+inline F32 DEGREE(F32 radian)
 {
-    return static_cast<real>(radian * 180.0f / R_PI);
+    return static_cast<F32>(radian * 180.0f / PI);
 }
 
-inline real REAL_CLAMP(real val, real min, real max)
+inline F32 CLAMP(F32 val, F32 min, F32 max)
 {
     if (val < min)
     {

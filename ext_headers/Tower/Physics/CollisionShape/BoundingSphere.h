@@ -13,7 +13,7 @@ namespace Tower
     public:
         BoundingSphere(void);
 
-        BoundingSphere(const glm::vec3& center, real radius);
+        BoundingSphere(const glm::vec3& center, F32 radius);
 
         BoundingSphere(const BoundingSphere& one, const BoundingSphere& two);
 
@@ -21,9 +21,9 @@ namespace Tower
 
         bool TestCollision(const BoundingSphere& other) const;
 
-        real GetGrowth(BoundingSphere& other) const;
+        F32 GetGrowth(BoundingSphere& other) const;
 
-        real GetSize(void) const;
+        F32 GetSize(void) const;
 
         void SetCenter(const glm::vec3& pos);
 
@@ -31,13 +31,13 @@ namespace Tower
 
         const glm::vec3& GetCenter(void) const;
 
-        void SetRadius(real r);
+        void SetRadius(F32 r);
 
-        real GetRadius(void) const;
+        F32 GetRadius(void) const;
 
     private:
         glm::vec3 _center;
-        real _radius;
+        F32 _radius;
 
     };//end Class
     typedef shared_ptr<BoundingSphere> p_BoundingSphere;

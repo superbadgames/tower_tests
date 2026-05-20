@@ -16,26 +16,26 @@ namespace Tower
     public:
         DragForce(void);
 
-        DragForce(real drag);
+        DragForce(F32 drag);
 
         ~DragForce(void);
 
         void v_UpdateForce(p_Particle body) final;
 
-        inline void SetDrag(real d)
+        inline void SetDrag(F32 d)
         {
             _drag = d;
             _dragSqr = _drag * _drag;
         }
 
-        inline real GetDrag(void)
+        inline F32 GetDrag(void)
         {
             return _drag;
         }
 
     private:
-        real _drag;
-        real _dragSqr;
+        F32 _drag;
+        F32 _dragSqr;
     };//end class
     typedef shared_ptr<DragForce> p_DragForce;
 }//end namespace

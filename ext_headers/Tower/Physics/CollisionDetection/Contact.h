@@ -17,9 +17,9 @@ namespace Tower
     private:
         glm::vec4 _contactPoint;
         glm::vec4 _collisionNormal;
-        real _penetrationDepth;
-        real _collisionRestitution;
-        real _friction;
+        F32 _penetrationDepth;
+        F32 _collisionRestitution;
+        F32 _friction;
     };//end Class
     typedef shared_ptr<Contact> p_Contact;
 }//end Namespace

@@ -13,7 +13,7 @@ namespace Tower
     public:
         AnchoredSpring(void);
 
-        AnchoredSpring(const glm::vec3& anchor, real springConstant, real restLength);
+        AnchoredSpring(const glm::vec3& anchor, F32 springConstant, F32 restLength);
 
         ~AnchoredSpring(void);
 
@@ -21,14 +21,14 @@ namespace Tower
 
         void SetAnchor(const glm::vec3& anchor);
 
-        void SetSpringConstant(real constant);
+        void SetSpringConstant(F32 constant);
 
-        void SetRestLength(real length);
+        void SetRestLength(F32 length);
 
     private:
         glm::vec3 _anchor;
-        real _springConstant;
-        real _restLength;
+        F32 _springConstant;
+        F32 _restLength;
     };//end AnchoredSpring
     typedef shared_ptr<AnchoredSpring> p_AnchoredSpring;
 }//end Namespace

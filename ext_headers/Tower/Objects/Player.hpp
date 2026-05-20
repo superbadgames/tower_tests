@@ -55,6 +55,8 @@ namespace Tower
 
     void _DefaultInit(void);
 
+    void _DefaultUpdate(F32 delta);
+
     inline void _DefaultActivate(void) { _active = true; }
 
     inline void _DefaultDeactivate(void) { _active = false; }
